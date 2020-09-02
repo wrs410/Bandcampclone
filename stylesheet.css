@@ -1,0 +1,255 @@
+
+@font-face {
+	font-family: "Helvetica Neue";
+	src: url('helveticaneue-roman.otf');
+}
+
+body {
+	background: url("0019860425_130.jpg") ;
+}
+
+
+* {
+    font-family: "Helvetica Neue";
+  }
+
+  .nav-link.dropdown-toggle::after {
+  	display:none;
+  }
+
+  .dropdown-menu {
+  	border: 1px solid white;
+  }
+
+  .nav-item .oi {
+  	font-size: 2rem;
+  }
+
+  #top-nav {
+  	padding: .2rem 1rem;
+  }
+
+  #top-nav > .container {
+  	max-width: 1260px;
+  }
+
+  #header-nav {
+  	padding-top:0px !important;
+  	padding-bottom:8px !important;
+  	background-color: #F6841E !important;
+
+  }
+
+  #header-nav > ul > li {
+  	color: #0E07C5;
+  	font-size: 0.9rem;
+  }
+
+  .jumbotron {
+  	margin-bottom:0 !important;
+    background-image: url('0007491537_100.png');
+    max-width: 975px; 
+    max-height:210px;
+  }
+
+  .maincontainer {
+  	max-width: 975px;
+  	background-color: #F6841E !important;
+  }
+
+  .maincontainer > .row {
+  	padding-top: 32px;
+  }
+
+  .figure-image {
+  	max-width: 350px;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, a {
+  	color: #0E07C5 !important;
+  }
+
+input[type=range] {
+	  width: 100%;
+  margin: 1.8px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.2px solid #d9d9d9;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -2px;
+  width: 24px;
+  height: 12px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+input[type=range]::-moz-range-track {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.2px solid #d9d9d9;
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 24px;
+  height: 12px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 2.8px 0;
+  color: transparent;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #f2f2f2;
+  border: 0.2px solid #d9d9d9;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.2px solid #d9d9d9;
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+  width: 24px;
+  height: 12px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  cursor: pointer;
+  margin-top: 0px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(255, 255, 255, 0.1);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@supports (-ms-ime-align:auto) {
+  input[type=range] {
+    margin: 0;
+  }
+}
+
+#gridarea {
+	display:grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+		"a a a a a"
+		"b b b b c";
+}
+
+.player-grid-1 {
+	font-size: 0.75rem;
+	grid-area: a;
+}
+
+.player-grid-2 {
+	grid-area: b;
+}
+
+	.player-grid-3 {
+    grid-area: c;	
+}
+
+#primary-play-button, #primary-pause-button {
+	border-radius: 2px !important;
+	border: 1px solid silver;
+	background: white;
+	width: 56px; 
+	height: 52px;
+}
+
+#primary-play-button > .oi, #primary-pause-button > .oi {
+	font-size: 1.8rem;
+}
+
+#primary-pause-button {
+	display:none;
+}
+
+#middle-column p {
+	font-size: 0.75rem;
+}
+
+#left-column p {
+	font-size: 0.75rem;
+}
+
+.discog-btn {
+	text-align:center;
+	width: 65px; 
+	height: 65px;
+	background-color: rgba(0, 0, 0, 0.1);
+	border: none;
+	color: #0E07C5 !important;;
+	font-size: 10px !important;
+}
+
+tr, td {
+	border: none !important;
+}
+
+td {
+	padding: none !important;
+	vertical-align: middle !important;
+}
+
+.tracklist {
+	color: #0E07C5 !important;;
+	font-size: 12px !important;
+}
+
+.track-number {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+
+.tracklist-title {
+	padding-left: 0 !important;
+}
+
+.tracklist-track > td {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.tracklist-button {
+	padding-right:0.25rem !important;
+	text-align:center;
+	padding-left: 0 !important;
+}
+
+.trackbutton {
+	border-radius: 2px;
+	border: 1px solid silver;
+	width: 20px;
+	height: 20px;
+}
+
+.album-column > p {
+	font-size: 12px;
+}

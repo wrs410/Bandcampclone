@@ -1,0 +1,342 @@
+<html>
+<head>
+		<!-- CSS only -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+		<!-- JS, Popper.js, and jQuery -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.0/font/css/open-iconic-bootstrap.min.css" />
+	 	<link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+
+	<!-- Fixed Top Navbar --> 
+	<nav id = "top-nav" class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+
+			<!-- Left Navbar List -->
+		    <a style = "color: black !important" class="navbar-brand" href="#">put logo here</a>
+		    <ul class="navbar-nav mr-auto">
+			     <li class="nav-item active">
+			        <a style = "color: black !important" class="nav-link" href="#">dashboard <span class="sr-only">(current)</span></a>
+			     </li>
+			     <li class="nav-item dropdown active">
+			        <a style = "color: black !important" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          +add
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a style = "color: black !important" class="dropdown-item" href="#">Album</a>
+			          <a style = "color: black !important" class="dropdown-item" href="#">Track</a>
+			          <a style = "color: black !important" class="dropdown-item" href="#">Merch</a>
+			        </div>
+			     </li>
+			     <li class="nav-item active">
+			        <a style = "color: black !important" class="nav-link" href="#">stats</a>
+			     </li>
+		    </ul>
+		    <!-- Left Navbar List -->
+
+		    <!-- Right Navbar List -->
+		    <ul class="navbar-nav iconbar mr-5">
+		    	<li class="nav-item pr-4 active"> <span class="oi oi-magnifying-glass"></span></li>
+		    	<li class="nav-item px-4 active"> <span class="oi oi-bell"></span></li>
+		    	<li class="nav-item px-4 active"> <span class="oi oi-bolt"></span></li>
+		    	<li class="nav-item pl-4 active"> <span class="oi oi-heart"></span></li>
+		    </ul>
+		    <!-- / Right Navbar List -->
+		</div> 
+	</nav>
+	<!-- / Fixed Top Navbar --> 
+
+   <!--  Artist Header -->
+	<div id = "albumartarea" class="container-md">
+		<div class="mx-auto jumbotron jumbotron-fluid" style = " ">
+		
+		  	<nav id = "header-nav" style = "margin-top:116px" class="navbar navbar-expand-lg navbar-light bg-light">
+			    <ul class="navbar-nav">
+			    	<li class="nav-item active" style = "border-top: 2px solid #0E07C5"><a href = "#"><strong>music</strong></a></li>
+			    	<li class="nav-item px-4 active" style = "padding-top: 2px"><a href = "#"><strong>merch</strong></a></li>
+			    	<li class="nav-item active" style = "padding-top: 2px"><a href = "#"><strong>community</strong></a></li>
+			    </ul>
+			</nav>
+		</div>
+	</div>
+   <!-- /  Artist Header -->	
+
+   <!-- Main page area, three columns -->
+	<div class="maincontainer container-md">	
+		<div class="row px-2">
+
+			<!-- Left Column -->
+			<div id = "left-column" class="px-3 col-5">
+				<!-- Album title area and edit buttons -->
+				<div class="titlearea">
+					<h2>ZONE 2</h2>
+					<p>by WRS</p>
+					<button style = "height: 22px; background-color: lightyellow; border: 1px solid silver; text-align:center; padding: .05em 0.75em;"  ><a style = "font-size: 12px" href='#'>Edit</a></button>
+					<button style = "margin-right:4px; height: 22px; background-color: lightyellow; border: 1px solid silver; text-align:center; padding: .05em 0.75em;"  ><a style = "font-size: 12px" href='#'>Delete</a></buttonp>
+					<button style = "height: 22px; background-color: lightyellow; border: 1px solid silver; text-align:center; padding: .05em 0.75em;"  ><a style = "font-size: 12px" href='#'>Bulk Edit</a></button>
+				</div>
+				<!-- / Album title area and edit buttons -->
+
+				<!-- Primary Audio Player -->
+				<div id = "audio-player" class = "my-3">
+					<button id = "primary-play-button" class="btn float-left mr-2"><span class="oi oi-media-play"></span></button>
+					<button id = "primary-pause-button" class="btn float-left mr-2"><span class="oi oi-media-pause"></span></button>
+					<div id = "gridarea">
+						<div class = "player-grid-1"><p class = "pt-1" style = "margin-bottom: 0px !important">Track Title <span class = "track-time">0:00 / 5:50</span></p></div>
+						<input value = "0" class = "player-grid-2 mr-2" id = "audio-progress-bar" type="range">
+						<div class = "player-grid-3 ml-2">
+							<span class="oi oi-media-step-backward"></span>
+							<span class="oi oi-media-step-forward"></span>
+						</div>
+					</div>
+				</div>
+				<!-- / Primary Audio Player -->
+
+
+				<!-- Buy single album -->
+				<div class="buy-album mb-3">
+					<h6 class = "mb-1"><a href='#'><strong>Digital Album</strong></a></h6>
+
+					<p class = "mb-2">Streaming + Download</p>
+
+					<p>Includes high-quality download isn MP3, FLAC and more. Paying supporters also get unlimited streaming via the free Bandcamp app.</p>
+
+					<div class="albumtitle">
+						<h5 style = "margin-bottom: 0" class = "float-left mr-1"><a href='#'><strong>Buy Digital Album</strong></a></h5>
+						<p class = "pt-1 mb-1">name your price</p>
+					</div>
+
+					<p class = "mb-2"><a href='#'><strong>Send as Gift</strong></a></p>			
+				</div>
+				<!-- / Buy single album -->
+
+
+				<!-- Buy whole discogrpahy -->
+				<div class="buy-discog mb-3">
+					<h6><strong>Full Digital Discography</strong></h6>
+
+					<img src="rest-of-discog.png" class = "float-left img-responsive" alt="discography">
+
+					<button class="discog-btn ml-2"><span style = "font-size: 1.25rem" >17</span> <br> <span style = "font-size: 10px"></span>releases</button>	
+
+					<p class = "my-1">Get <strong>all 17 WRS releases</strong> available on Bandcamp.</p>
+
+					<p>Includes unlimited streaming via the free Bandcamp app, plus high-quality downloads of <span class="discog-list">ZONE 2, ZONE, Wold EP, Bilge, Hilbert, RESTRICTED PIZZA CONTAINMENT AREA, NOSSNPROPIAUS EP, SMALL BATCH, and 9 more.</span></p>
+
+					<div class="albumtitle">
+						<h5 style = "margin-bottom: 0" class = "float-left mr-1"><a href='#'><strong>Buy Digital Discography $2</strong></a></h5>
+						<p class = "pt-1 mb-1"><strong>USD</strong> or more</p>
+					</div>
+
+					<p class = "mb-2"><a href='#'><strong>Send as Gift</strong></a></p>	
+				</div>
+				<!-- / Buy whole discogrpahy -->
+
+				<table class="table tracklist mb-4">
+					<tbody>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>
+						<tr class="tracklist-track">
+							<td class="tracklist-button"></td>
+							<td class="track-number"></td>
+							<td class="tracklist-title"><span class="track-title"> </span> <span class="track-length"> </span></td>
+						</tr>			
+					</tbody>
+				</table>
+
+				<p>THE SECOND INSTALLMENT IN THE ZONE TRILOGY</p>
+
+				<p>SINCE WE'RE STUCK INSIDE I FIGURED NOW WOULD BE A GOOD TIME TO FINISH THIS PROJECT</p>
+
+				<p class="mb-3">ENJOY!</p>
+
+				<p>released July 11, 2020</p>
+
+				<p>Will Scerbo - keys, synth, guitar, noises, vocals</p>
+
+				<p>flapricot - album art</p>
+
+				<p class="mb-3">© all rights reserved</p>
+
+
+
+
+			</div>
+			<!-- / Left Column -->
+
+			<!-- Middle Column -->
+			<div id = "middle-column" class="col-5">
+				<figure class="figure">
+				  <img style = "width: 350px; height: 350px"  src="a3716174761_16.jpg" class="figure-img img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
+				  <figcaption class="figure-caption text-left"><span class="oi oi-share-boxed"></span> <a href="#"><strong>Share / Embed</strong></a> <span class="ml-5"><span class="oi oi-heart"></span> <a href="#"><strong>Wishlist</strong></a></span></figcaption>
+				  
+				</figure>
+
+				<p>supported by</p>
+
+				
+
+			</div>
+			<!-- / Middle Column -->
+
+
+
+			<!-- Right Column -->
+			<div class="col album-column">
+				<img src="0021459868_21.jpg" alt="WRS logo" class="img-fluid mb-2">
+				<h6 class = "mb-1"><strong>WRS</strong></h6>
+				<p>Baltimore, Maryland</p>
+				<button style = "font-size:12px; width: 120px; height: 30px" class="btn btn-info mb-2"><strong>Following</strong></button>
+				<p class="mb-3">NOISY JAMS FROM MARYLAND</p>
+				<p>PEACE</p>
+				<p>edit artist bio</p>
+				<p class = "mb-3">Recommendations</p>
+				<h6>discography</h6>
+				<img style = "max-width: 120px" src="a3716174761_7.jpg" alt="album cover" class="img-fluid mb-1">
+				<p class = "mb-0">ZONE 2</p>
+				<p style = "font-size: 10px">Jul 2020</p>
+				<img style = "max-width: 120px" src="a4074389638_7.jpg" alt="album cover" class="img-fluid mb-1">
+				<p class = "mb-0">ZONE</p>
+				<p style = "font-size: 10px">Aug 2018</p>
+				<img style = "max-width: 120px" src="a0020783037_7.jpg" alt="album cover" class="img-fluid mb-1">
+				<p class = "mb-0">Wold EP</p>
+				<p style = "font-size: 10px">Apr 2017</p>
+
+				<p class = "mb-4"><strong>more releases...</strong></p>
+
+				<h6><a href="#">contact / help</a></h6>
+				<p><a href="#">Contact WRS</a></p>
+				<p><a href="#"> Streaming and <br>Download help</a></p>
+				<p><a href="#">Redeem code</a></p>
+				<p><a href="#">Report this album or account</a></p>
+
+			</div>
+			<!-- / Right Column -->
+		</div>
+
+		<!-- Tags Area -->
+		<div class="row px-2">
+			<div class="col"><h6><strong>Tags</strong></h6>
+				<p style = "font-size:12px !important">
+					<span class="mr-2">experimental</span>
+					<span class="mr-2"> art pop</span>
+					<span class="mr-2"> electronic</span>
+					<span class="mr-2"> experimental pop</span>
+					<span class="mr-2"> indie pop</span>
+					<span class="mr-2"> instrumental</span>
+					<span class="mr-2"> jams</span>
+					<span class="mr-2"> noise pop</span>
+					<span class="mr-2">sampler</span>
+					<span class="mr-2">  sophistipop </span>
+					<span class="mr-2">synthrock </span>
+					<span>Baltimore</span>
+				</p>
+			</div>
+		</div>
+		<!-- / Tags Area -->
+	</div>
+	<!-- / Main page area, three columns -->
+	
+
+	<script> 
+		
+		let playbutton = document.querySelector("#primary-play-button");
+		let audiobar = document.querySelector("#audio-progress-bar");
+		let interval;
+		let counter = 0;
+
+		playbutton.addEventListener("click", function() {
+			if (interval) {
+				return;
+			}
+
+			interval = setInterval(function() {
+				if (counter < 5) {
+					audiobar.stepUp();
+					counter += 1;
+				} else {
+					clearInterval(interval);
+					interval = null;
+					counter = 0;
+					audiobar.value = 0;
+				}
+
+			}, 200);
+		});
+
+		const tracks = [{track: "Give Up", length: "06:09"},
+		{track: "New Look, Same Great Taste", length: "09:16"},
+		{track: "The Content You Crave", length: "03:45"},
+		{track: "Oh Word", length: "05:15"},
+		{track: "Lattice of Coincidence", length: "02:58"},
+		{track: "Traversal 1", length: "01:40"},
+		{track: "Even Worse", length: "04:11"},
+		{track: "Down to Earth", length: "06:22"},
+		{track: "Boiling Ocean", length: "06:44"},
+		{track: "In The Zone", length: "06:50"},
+		{track: "Request Dream", length: "08:22"}];
+
+		let tracknums = [...document.querySelectorAll('.track-number')];
+		let tracktitles = [...document.querySelectorAll('.track-title')];
+		let tracklens = [...document.querySelectorAll('.track-length')];
+		let buttons = [...document.querySelectorAll('.tracklist-button')];
+		buttons.map((button) => {button.innerHTML = `<button class = "trackbutton"><span class="oi oi-media-play"></span></button>`});
+		tracktitles.map((tracktitle) => {tracktitle.innerHTML = tracks[tracktitles.indexOf(tracktitle)].track});
+		tracklens.map((tracklen) => {tracklen.innerHTML = tracks[tracklens.indexOf(tracklen)].length});
+		tracknums.map((tracknum) => {tracknum.innerHTML = tracknums.indexOf(tracknum) + 1 + '.'});
+
+	</script>
+</body>
+</html>
